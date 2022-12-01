@@ -1,63 +1,68 @@
 {
-    "basic_info": {
-      "name": "Shivani Inamdar",
-      "titles": [ "Front-end Developer", "UI Application Developer", "Web Developer" ],
-      "social": [
-        {
-          "name": "github",
-          "url": "https://github.com/shivaniInamdar-fullstack",
-          "class": "fab fa-github"
-        },
-        {
-          "name": "instagram",
-          "url": "https://www.instagram.com",
-          "class": "fab fa-instagram"
-        }
-      ],
-      "image": "myProfile.png"
-    },
-    "skills": {
-      "icons": [
-        {
-          "name": "HTML 5",
-          "class": "devicon-html5-plain",
-          "level": "95"
-        },
-        {
-          "name": "CSS 3",
-          "class": "devicon-css3-plain",
-          "level": "95"
-        },
-        {
-          "name": "React JS",
-          "class": "devicon-react-original",
-          "level": "80"
-        },
-        {
-          "name": "Node JS",
-          "class": "devicon-nodejs-plain",
-          "level": "90"
-        },
-        {
-          "name": "JavaScript",
-          "class": "devicon-javascript-plain",
-          "level": "70"
-        },
-        {
-          "name": "PostgreSQL",
-          "class": "devicon-postgresql-plain",
-          "level": "75"
-        },
-        {
-          "name": "Bootstrap",
-          "class": "devicon-bootstrap-plain",
-          "level": "85"
-        },
-        {
-          "name": "Docker",
-          "class": "devicon-docker-plain",
-          "level": "65"
-        }
-      ]
-    }
+  "basic_info": {
+    "name": "Shivani Inamdar",
+    "titles": [ "Front-end Developer", "UI Application Developer", "Web Developer" ],
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/shivaniInamdar-fullstack",
+        "class": "fab fa-github"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shivani-inamdar-205276148/",
+        "class": "fab fa-linkedin"
+      },
+      {
+        "name": "gmail",
+        "url": "mailto:shivani.inamdar@gmail.com",
+        "class": "fab fa-google-plus"
+      }
+    ],
+    "image": "myProfile.png"
+  },
+  "skills": {
+    "icons": [
+      {
+        "name": "HTML 5",
+        "class": "devicon-html5-plain",
+        "level": "95"
+      },
+      {
+        "name": "CSS 3",
+        "class": "devicon-css3-plain",
+        "level": "95"
+      },
+      {
+        "name": "React JS",
+        "class": "devicon-react-original",
+        "level": "80"
+      },
+      {
+        "name": "Node JS",
+        "class": "devicon-nodejs-plain",
+        "level": "90"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon-javascript-plain",
+        "level": "70"
+      },
+      {
+        "name": "PostgreSQL",
+        "class": "devicon-postgresql-plain",
+        "level": "75"
+      },
+      {
+        "name": "Bootstrap",
+        "class": "devicon-bootstrap-plain",
+        "level": "85"
+      },
+      {
+        "name": "Docker",
+        "class": "devicon-docker-plain",
+        "level": "65"
+      }
+    ]
   }
+}

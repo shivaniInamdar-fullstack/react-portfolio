@@ -28,6 +28,15 @@ class Header extends Component {
     if (this.props.sharedData) {
       var name = this.props.sharedData.name;
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
+      var networks = this.props.sharedData.social.map(function (network) {
+        return (
+          <span key={network.name} className="m-4">
+            <a href={network.url} target="_blank" rel="noopener noreferrer">
+              <i className={network.class}></i>
+            </a>
+          </span>
+        );
+      });
     }
 
     const HeaderTitleTypeAnimation = React.memo( () => {
@@ -38,16 +47,7 @@ class Header extends Component {
       <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
-            <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
-              <h1 className="mb-0">
-                <Typical steps={[name]} wrapper="p" />
-              </h1>
-              <div className="title-container">
-                <HeaderTitleTypeAnimation />
-              </div>
-              <Switch
+          <Switch
                 checked={this.state.checked}
                 onChange={this.onThemeSwitchChange}
                 offColor="#baaa80"
@@ -87,6 +87,21 @@ class Header extends Component {
                 }
                 id="icon-switch"
               />
+            <div>
+              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
+              <br/>
+              <h1 className="mb-0">
+                <Typical steps={[name]} wrapper="p" />
+              </h1>
+              <div className="title-container">
+                <HeaderTitleTypeAnimation />
+              </div>
+              <div style={{paddingTop:'10px'}}>
+              <h3 style={{marginTop:'25px'}}>
+                Let's Connect At
+              </h3>
+              <div className="social-links" style={{marginTop:'25px', fontSize:'40px'}}>{networks}</div>
+              </div>
             </div>
           </div>
         </div>
