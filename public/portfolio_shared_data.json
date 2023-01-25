@@ -4,7 +4,7 @@
     "titles": [ "Front-end Developer", "UI Application Developer", "Web Developer" ],
     "social": [
       {
-        "name": "github",
+        "name": "Github",
         "url": "https://github.com/shivaniInamdar-fullstack",
         "class": "fab fa-github"
       },
@@ -14,9 +14,14 @@
         "class": "fab fa-linkedin"
       },
       {
-        "name": "gmail",
+        "name": "Gmail",
         "url": "mailto:shivani.inamdar@gmail.com",
-        "class": "fab fa-google-plus"
+        "class": "fab fa-google-plus" 
+      },
+      {
+        "name": "Download Resume",
+        "url": "/files/myfile.pdf",
+        "class": "fab fa-file-pdf-o" 
       }
     ],
     "image": "myProfile.png"

@@ -27,11 +27,20 @@ class Header extends Component {
   render() {
     if (this.props.sharedData) {
       var name = this.props.sharedData.name;
-      this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
+      this.titles = this.props.sharedData.titles
+        .map((x) => [x.toUpperCase(), 1500])
+        .flat();
       var networks = this.props.sharedData.social.map(function (network) {
         return (
           <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
+            {network.name==='Download Resume' && (
+              <>
+              <a href="/files/myfile.pdf" className="button" target="_blank" title={network.name} download={'Shivani Inamdar Resume.pdf'}>
+              <i className="fa fa-file-pdf-o">&#xf1c1;</i>
+              </a>
+              </>
+            )}
+            <a href={network.url} target="_blank" title={network.name} rel="noopener noreferrer">
               <i className={network.class}></i>
             </a>
           </span>
@@ -39,68 +48,84 @@ class Header extends Component {
       });
     }
 
-    const HeaderTitleTypeAnimation = React.memo( () => {
-      return <Typical className="title-styles" steps={this.titles} loop={50} />
-    }, (props, prevProp) => true);
+    const HeaderTitleTypeAnimation = React.memo(
+      () => {
+        return (
+          <Typical className="title-styles" steps={this.titles} loop={50} />
+        );
+      },
+      (props, prevProp) => true
+    );
 
     return (
-      <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
-        <div className="row aligner" style={{height: '100%'}}>
+      <header
+        id="home"
+        style={{ height: window.innerHeight - 140, display: "block" }}
+      >
+        <div className="row aligner" style={{ height: "100%" }}>
           <div className="col-md-12">
-          <Switch
-                checked={this.state.checked}
-                onChange={this.onThemeSwitchChange}
-                offColor="#baaa80"
-                onColor="#353535"
-                className="react-switch mx-auto"
-                width={90}
-                height={40}
-                uncheckedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="twemoji:owl"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "20px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                checkedIcon={
-                  <span
-                    className="iconify"
-                    data-icon="noto-v1:sun-with-face"
-                    data-inline="false"
-                    style={{
-                      display: "block",
-                      height: "100%",
-                      fontSize: 25,
-                      textAlign: "end",
-                      marginLeft: "10px",
-                      color: "#353239",
-                    }}
-                  ></span>
-                }
-                id="icon-switch"
-              />
+            <Switch
+              checked={this.state.checked}
+              onChange={this.onThemeSwitchChange}
+              offColor="#baaa80"
+              onColor="#353535"
+              className="react-switch mx-auto"
+              width={90}
+              height={40}
+              uncheckedIcon={
+                <span
+                  className="iconify"
+                  data-icon="twemoji:owl"
+                  data-inline="false"
+                  style={{
+                    display: "block",
+                    height: "100%",
+                    fontSize: 25,
+                    textAlign: "end",
+                    marginLeft: "20px",
+                    color: "#353239",
+                  }}
+                ></span>
+              }
+              checkedIcon={
+                <span
+                  className="iconify"
+                  data-icon="noto-v1:sun-with-face"
+                  data-inline="false"
+                  style={{
+                    display: "block",
+                    height: "100%",
+                    fontSize: 25,
+                    textAlign: "end",
+                    marginLeft: "10px",
+                    color: "#353239",
+                  }}
+                ></span>
+              }
+              id="icon-switch"
+            />
             <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
-              <br/>
+              <span
+                className="iconify header-icon"
+                data-icon="la:laptop-code"
+                data-inline="false"
+              ></span>
+              <br />
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <div className="title-container">
                 <HeaderTitleTypeAnimation />
               </div>
-              <div style={{paddingTop:'10px'}}>
-              <h3 style={{marginTop:'25px'}}>
-                Let's Connect At
-              </h3>
-              <div className="social-links" style={{marginTop:'25px', fontSize:'40px'}}>{networks}</div>
+              <div style={{ paddingTop: "10px" }}>
+                <h3 style={{ marginTop: "25px" }}>Let's Connect At</h3>
+
+                <div
+                  className="social-links"
+                  style={{ marginTop: "25px", fontSize: "40px" }}
+                >
+                  {networks}
+                </div>
               </div>
             </div>
           </div>

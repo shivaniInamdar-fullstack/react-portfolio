@@ -412,6 +412,11 @@ footer {
 	text-align: center;
 }
 
+.fa.fa-file-pdf-o{
+	font-size: 35px;
+	padding: 10px;
+	color: red;
+}
 footer a,
 footer a:visited {
 	color: #fff;
@@ -425,4 +430,13 @@ footer a:focus {
 .social-links {
 	margin-top: 50px;
 	font-size: 22px;
+}
+footer a,
+footer a:visited {
+	color: #fff;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #fff;
 }
