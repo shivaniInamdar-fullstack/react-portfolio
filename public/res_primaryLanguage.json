@@ -85,6 +85,25 @@
       }
     ],
     "experience": [
+        {
+        "company": "Cedarware Corp.",
+        "title": "Software Engineer",
+        "years": "06.2023 - PRESENT",
+        "mainTech": [
+          "ReactJS",
+            "Flutter",
+            "NodeJS",
+            "AWS"
+        ],
+        "technologies": [
+          "ReactJS",
+            "Flutter",
+            "NodeJS",
+            "AWS"
+          "HTML",
+          "CSS"
+        ]
+      },
       {
         "company": "Barclays Global Service",
         "title": "UI Application Developer",
